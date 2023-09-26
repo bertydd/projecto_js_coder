@@ -22,7 +22,7 @@ function obtnerInscripcionCursoBudismo(){
     let inscripcionNueva = new Inscripcion(nombreAdd,"budismo",dni,tipoDePago);
     inscripcionesList.push(inscripcionNueva)
     
-    alert("te has inscripto con el dni"+ inscripcionNueva.dni+"el curso: "+inscripcionNueva.curso);
+    alert("te has inscripto con el dni"+ inscripcionNueva.dni+"el curso: "+inscripcionNueva.curso+"el monto es: "+inscripcionNueva.precio);
     console.log("inscripcion satisfactoria!!!!")
 
 }
