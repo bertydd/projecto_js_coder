@@ -1,0 +1,242 @@
+@font-face {
+    font-family: DM_sans_regular;
+    src: url(../assets/font/dmSans.ttf);
+}
+
+@font-face {
+    font-family: DM_sans_bold;
+    src: url(../assets/font/DMSans-Bold.ttf)
+}
+
+@font-face {
+    font-family: DM_sans_italic;
+    src: url(../assets/font/DMSans-Italic.ttf)
+}
+
+section {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+.navbar-toggler {
+    background: linear-gradient(261deg, #C0C8DA 0%, #EECBD6 100%);
+}
+
+.bg-nav {
+    background: linear-gradient(261deg, #C0C8DA 0%, #EECBD6 100%);
+    position: fixed;
+}
+
+.anclaNav {
+    color: #6077A3;
+    text-decoration: none;
+    margin: 10px;
+    width: 50%;
+    font-family: DM_sans_regular;
+}
+
+.tituloPrincipal {
+    font-family: DM_sans_regular;
+    text-align: center;
+    color: #212121;
+    margin: 1rem;
+}
+
+h2 {
+    font-family: DM_sans_regular;
+    text-align: center;
+    color: #6077A3;
+    margin: 1rem;
+}
+
+h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-family: DM_sans_regular;
+    text-align: center;
+    color: #212121;
+}
+
+.contenedorCard {
+    background: #6077A3;
+}
+
+.gallery-item {
+    background-color: #6077A3;
+    border-radius: 25px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item .caption {
+    color: #FFF;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.gallery-container .row {
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+.titulosCards {
+    font-family: DM_sans_bold;
+    color: #Ffffff;
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
+    background: #6077A3;
+    text-align: justify;
+}
+
+.articulos {
+    color: #Ffffff;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: DM_sans_regular;
+    padding: 10px;
+    margin: 10px;
+    text-align: justify;
+}
+
+.youtube-video {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    
+  }
+
+.parrafoUsuarios {
+    font-family: DM_sans_regular;
+    text-align: justify;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.testimonioUsuarios {
+    margin: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin-inline-start: 0.5rem;
+    margin-inline-end: 0.5rem;
+}
+
+.parrafoFooter {
+    font-family: DM_sans_regular;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Esto es para los párrafos que ocupan el ancho de la página*/
+
+.parrafoJustificado {
+    font-family: DM_sans_regular;
+    text-align: justify;
+    margin-inline-start: 3%;
+    margin-inline-end: 3%;
+    font-size: 1rem;
+}
+
+.card{
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
+}
+/* Esto es el formulario de contacto, main solo de "contacto" */
+.main-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.formularioContacto {
+    font-family: DM_sans_regular;
+    padding: 25px;
+    text-align: center;
+    background: linear-gradient(233.55deg, #D9E1F2 -0.36%, #F3D8E0 96.96%);
+    border-radius: 25px;
+    width: 70%;
+    font-size: 1rem;
+    margin: 10px;
+}
+
+.formularioContacto input[type="text"],
+.formularioContacto input[type="email"],
+.formularioContacto input[type="tel"],
+.formularioContacto textarea {
+    border: none;
+    border-bottom: 1px solid #6077A3;
+    padding: 5px;
+    background-color: transparent;
+    outline: none;
+    font-family: DM_sans_regular;
+    font-size: 1rem;
+}
+
+/* Boton BORRAR FORMULARIO*/
+.botonBorrar {
+    font-family: DM_sans_regular;
+    border-radius: 10px;
+    background: #FFFFFF;
+    color: #6077A3;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: 0.1px solid #6077A3;
+    font-size: 1rem;
+    height: 30px;
+    width: 160px;
+    margin: 5px;
+}
+
+/* Boton ENVIAR FORMULARIO*/
+.botonEnviar {
+    font-family: DM_sans_regular;
+    border-radius: 10px;
+    background: linear-gradient(233.55deg, #7E9CD7 -0.36%, #7E9CD7 27.45%, #5D84CF 53.71%, #4D6FAE 77.39%, #395C9E 98.46%);
+    color: #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: none;
+    font-size: 1rem;
+    height: 30px;
+    width: 160px;
+    margin: 5px;
+}
+
+/* Mapa de ubicación */
+.maps {
+    padding: 1rem;
+    width: 70%;
+}
+
+/* whatsapp fixed en todas las pantalla*/
+.whatsappFixed {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+/* footer*/
+footer {
+    font-family: DM_sans_regular;
+    background: linear-gradient(261deg, #C0C8DA 0%, #EECBD6 100%);
+    text-align: center;
+    height: 100%;
+    margin-top: 1%;
+    margin-bottom: 0px;
+
+}
+
+.anclasRedes {
+    margin: 10px;
+}
