@@ -25,6 +25,12 @@ function obtnerInscripcionCursoBudismo(){
     alert("te has inscripto con el dni"+ inscripcionNueva.dni+"el curso: "+inscripcionNueva.curso+"el monto es: "+inscripcionNueva.precio);
     console.log("inscripcion satisfactoria!!!!")
 
+    getFormularioPago(inscripcionNueva.nombre,inscripcionNueva.dni,inscripcionNueva.tipoDePago,inscripcionNueva.precio);
+
+    let boton = document.getElementById("btInscrip");
+    boton.onmousemove = () => {alert("ya estas inscripto a este curso")}
+
+
 }
 
 
@@ -58,6 +64,20 @@ function consultarInscripciones(){
 
 }
 
+function getFormularioPago(nombre,dni,tipo){
+    let nroTarjeta = prompt("INGRESE NRO DE TARJETA")
+    if(tipo == "credito"){
+        let cuotas = prompt("INGRESE CANT DE CUOTAS")
+    }
+    let cel = prompt("INGRESE cel")
+    let segCod = prompt("cod de seguridad")
+    let pagoNuevo = new Pago(nombre,nroTarjeta,cel,dni,tipo,segCod,precio,cuotas)
+    console.log(pagoNuevo.cuotas)
+    alert("Pago aceptado")
+
+
+};
+
 class Inscripcion { 
     
     constructor(nombre, curso, dni,tipoDePago,precio){
@@ -67,3 +87,28 @@ class Inscripcion {
     this.tipoDePago= tipoDePago.toLocaleLowerCase;
     this.precio = obtenerPrecioDeCurso(tipoDePago);}
 }
+
+class Pago{ 
+    
+    constructor(nombre,nroTarjeta,cel,dni,tipo,segCod,precio,cuotas){
+    this.nombre= nombre;
+    this.curso = nroTarjeta;
+    this.cel= cel;
+    this.dni= dni;
+    this.tipo=tipo;
+    this.segCod=segCod;
+    this.precio=precio;
+    this.cuotas = getCalculoCuotas(cuotas,precio);}
+    
+}
+ function getCalculoCuotas(cuotas,precio){
+    let precioXCuota;
+    if(cuotas != 0 || cuotas != undefined ){
+        return precioXCuota= precio/cuotas;
+    }
+    else{
+        return precio;
+    }
+    
+ }
+
