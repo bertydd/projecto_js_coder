@@ -64,10 +64,14 @@ function consultarInscripciones(){
 
 }
 
-function getFormularioPago(nombre,dni,tipo){
+function getFormularioPago(nombre,dni,tipo,precio){
+    let cuotas;
     let nroTarjeta = prompt("INGRESE NRO DE TARJETA")
     if(tipo == "credito"){
-        let cuotas = prompt("INGRESE CANT DE CUOTAS")
+        cuotas = prompt("INGRESE CANT DE CUOTAS")
+    }
+    else{
+        cuotas = 0;
     }
     let cel = prompt("INGRESE cel")
     let segCod = prompt("cod de seguridad")
