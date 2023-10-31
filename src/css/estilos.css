@@ -175,6 +175,10 @@ h3 {
 .formularioContacto input[type="text"],
 .formularioContacto input[type="email"],
 .formularioContacto input[type="tel"],
+.formularioContacto input[type="tipo de Pago"],
+.formularioContacto input[type="Número de Tarjeta"],
+.formularioContacto input[type="Codigo Seguridad"],
+.formularioContacto input[type="Dni"],
 .formularioContacto textarea {
     border: none;
     border-bottom: 1px solid #6077A3;

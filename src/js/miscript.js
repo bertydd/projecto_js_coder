@@ -22,14 +22,22 @@ function obtnerInscripcionCursoBudismo(){
     let inscripcionNueva = new Inscripcion(nombreAdd,"budismo",dni,tipoDePago);
     inscripcionesList.push(inscripcionNueva)
     
-    alert("te has inscripto con el dni"+ inscripcionNueva.dni+"el curso: "+inscripcionNueva.curso+"el monto es: "+inscripcionNueva.precio);
     console.log("inscripcion satisfactoria!!!!")
+    localStorage.setItem("budismo","true")
 
     getFormularioPago(inscripcionNueva.nombre,inscripcionNueva.dni,inscripcionNueva.tipoDePago,inscripcionNueva.precio);
-
-    let boton = document.getElementById("btInscrip");
-    boton.onmousemove = () => {alert("ya estas inscripto a este curso")}
-
+    console.log(inscripcionNueva.nombre)
+    if(inscripcionNueva.tipoDePago != null){
+    Swal.fire({
+        title: 'INCRIPTO AL CURSO DE BUDISMO',
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 3000
+      })
+      
+      setTimeout("location.href = './CursosMágicos.html';",1500);
+    }
+      
 
 }
 
@@ -67,12 +75,9 @@ function consultarInscripciones(){
 function getFormularioPago(nombre,dni,tipo,precio){
     let cuotas;
     let nroTarjeta = prompt("INGRESE NRO DE TARJETA")
-    if(tipo == "credito"){
-        cuotas = prompt("INGRESE CANT DE CUOTAS")
-    }
-    else{
-        cuotas = 0;
-    }
+    console.log(tipo)
+    tipo == "credito" ? cuotas = prompt("INGRESE CANT DE CUOTAS") :cuotas = 0;
+
     let cel = prompt("INGRESE cel")
     let segCod = prompt("cod de seguridad")
     let pagoNuevo = new Pago(nombre,nroTarjeta,cel,dni,tipo,segCod,precio,cuotas)
@@ -84,11 +89,11 @@ function getFormularioPago(nombre,dni,tipo,precio){
 
 class Inscripcion { 
     
-    constructor(nombre, curso, dni,tipoDePago,precio){
+    constructor(nombre, curso, dni,tipoDePago){
     this.nombre= nombre;
     this.curso = curso;
     this.dni= dni;
-    this.tipoDePago= tipoDePago.toLocaleLowerCase;
+    this.tipoDePago= tipoDePago.toLocaleLowerCase();
     this.precio = obtenerPrecioDeCurso(tipoDePago);}
 }
 
